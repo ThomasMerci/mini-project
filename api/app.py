@@ -21,7 +21,7 @@ spark = SparkSession.builder.appName('predict-attrition').getOrCreate()
 model = PipelineModel.load("/app/Model")
 app = Flask(__name__, template_folder=os.path.abspath('templates'))
 
-#metrics = init_prometheus(app) test
+#metrics = init_prometheus(app)
 
 metrics = make_wsgi_app()
 app.wsgi_app = DispatcherMiddleware(app.wsgi_app, {'/metrics': metrics})
