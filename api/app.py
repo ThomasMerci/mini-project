@@ -26,13 +26,11 @@ app = Flask(__name__, template_folder=os.path.abspath('templates'))
 metrics = make_wsgi_app()
 app.wsgi_app = DispatcherMiddleware(app.wsgi_app, {'/metrics': metrics})
 
+
 @app.route('/')
 def generate_html():
     return render_template('index.html')
 
-# @app.route('/metrics')
-# def metrics():
-#     return metrics.export()
 
 @app.route('/predict', methods=['POST'])
 def predict():
