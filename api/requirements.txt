@@ -1,0 +1,9 @@
+flask
+pyspark
+numpy
+scipy
+pandas
+findspark
+prometheus-client
+prometheus-flask-exporter
+Flask-Prometheus

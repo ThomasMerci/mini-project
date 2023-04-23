@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+
+  spark-train-2:
+      container_name: spark-train-2
+      build:
+        context: ./train
+        dockerfile: Dockerfile.train
+      volumes:
+        - ./shared/model:/app/model
+      environment:
+        - SPARK_MODE=TRAIN
+      ports:
+        - "4040:4040"
+
+  api:
+    container_name: spark-app
+    build:
+      context: ./api
+      dockerfile: Dockerfile.api
+    environment:
+      - SPARK_HOME=/usr/local/spark
+      - MODEL_PATH=/shared/model
+      - FLASK_APP= api.py
+      - FLASK_ENV= development
+      - PROMETHEUS_URL= "http://prometheus:9090"
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./shared/model:/app/model
+    depends_on:
+      - prometheus
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus:/etc/prometheus
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    volumes:
+      - ./grafana:/var/lib/grafana
