@@ -1,5 +1,3 @@
-# Rapport sur le modèle Spark ML
-
 # Executer le projet
 
 Télécharger le projet. Sur votre terminal dans le dossier racine, executez ces deux commandes :
@@ -11,6 +9,9 @@ Télécharger le projet. Sur votre terminal dans le dossier racine, executez ces
 Une fois les services en statut 'running', allez sur votre navigateur. Pour accéder au formulaire employée copier cette route :
 
 http://localhost:5000/
+
+
+# Rapport sur le modèle Spark ML
 
 ## Introduction
 Le but de ce rapport est de présenter les différentes étapes qui ont été effectuées pour construire un modèle de Machine Learning avec Spark. Le modèle a été développé pour résoudre un problème lié à l'attrition des employées.
