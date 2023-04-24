@@ -6,7 +6,7 @@ Téléchargez le projet. Sur votre terminal dans le dossier racine, executez ces
 
 `docker-compose up -d`
 
-Une fois les services en statut 'running', allez sur votre navigateur. Pour accéder au formulaire employée copier cette route :
+Une fois les services en statut 'running', allez sur votre navigateur. Pour accéder au formulaire employée copiez cette route :
 
 http://localhost:5000/
 
