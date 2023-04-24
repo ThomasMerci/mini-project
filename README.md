@@ -1,6 +1,6 @@
 # Executer le projet
 
-Télécharger le projet. Sur votre terminal dans le dossier racine, executez ces deux commandes :
+Téléchargez le projet. Sur votre terminal dans le dossier racine, executez ces deux commandes :
 
 `docker-compose build`
 
