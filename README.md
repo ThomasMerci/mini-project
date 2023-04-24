@@ -1,4 +1,13 @@
 # Rapport sur le modèle Spark ML
+
+# Executer le projet
+
+Télécharger le projet. Sur votre terminal dans le dossier racine, executez ces deux commandes :
+
+`docker-compose build`
+
+`docker-compose up -d`
+
 ## Introduction
 Le but de ce rapport est de présenter les différentes étapes qui ont été effectuées pour construire un modèle de Machine Learning avec Spark. Le modèle a été développé pour résoudre un problème lié à l'attrition des employées.
 
@@ -14,10 +23,6 @@ Enfin, nous avons regardé les métriques d'évaluation pour garder le modèle l
 
 ## Conclusion
 En conclusion, nous avons présenté les différentes étapes qui ont été effectuées pour construire un modèle de Machine Learning avec Spark. Nous avons utilisé des techniques de visualisation et d'analyse pour comprendre le problème et nettoyé les données pour préparer le modèle. Nous avons ensuite utilisé la vectorisation des données pour la modélisation et testé différents algorithmes en faisant du fine tuning sur les hyperparamètres. Enfin, nous avons regardé les métriques d'évaluation pour garder le modèle le plus efficace.
-
-# Executer le projet
-`docker-compose build`
-`docker-compose up -d`
 
 # projet réalisé par :
 Valentin GUERARD, Ngoc Thao LY, Gabriello ZAFIFOMENDRAHA, Thomas MERCIER, Gaëtan ALLAH ASRA BADJINAN
